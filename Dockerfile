@@ -1,6 +1,8 @@
+###########################################
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-
+EXPOSE 8080
+EXPOSE 8081
 COPY McpServer/McpServer.csproj McpServer/
 RUN dotnet restore McpServer/McpServer.csproj
 
